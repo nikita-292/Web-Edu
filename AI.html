@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Artificial Intelligence Course</title>
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+    <header>
+        <h1>Introduction to Artificial Intelligence</h1>
+    </header>
+    
+    <section>
+        <h2>Course Description</h2>
+        <p>This comprehensive course provides an introduction to the field of artificial intelligence (AI), covering fundamental concepts and techniques used to create intelligent systems. Topics include machine learning, natural language processing, computer vision, and robotics. Whether you're a beginner or have some experience, this course will help you understand the basics of AI and its applications.</p>
+    </section>
+    
+    <section id="course-contents">
+        <h2>Course Contents</h2>
+        <ul>
+            <li class="topic">Introduction to Artificial Intelligence
+                <ul class="subtopics">
+                    <li>Overview of Artificial Intelligence</li>
+                    <li>History of AI</li>
+                    <li>AI Applications</li>
+                </ul>
+            </li>
+            <li class="topic">Machine Learning
+                <ul class="subtopics">
+                    <li>Supervised Learning</li>
+                    <li>Unsupervised Learning</li>
+                    <li>Deep Learning</li>
+                </ul>
+            </li>
+            <li class="topic">Natural Language Processing
+                <ul class="subtopics">
+                    <li>Text Processing</li>
+                    <li>Sentiment Analysis</li>
+                    <li>Language Translation</li>
+                </ul>
+            </li>
+            <li class="topic">Computer Vision
+                <ul class="subtopics">
+                    <li>Image Classification</li>
+                    <li>Object Detection</li>
+                    <li>Facial Recognition</li>
+                </ul>
+            </li>
+            <li class="topic">Robotics
+                <ul class="subtopics">
+                    <li>Introduction to Robotics</li>
+                    <li>Robotics in AI</li>
+                    <li>Autonomous Systems</li>
+                </ul>
+            </li>
+            <li class="topic">Ethical Considerations
+                <ul class="subtopics">
+                    <li>Ethical Issues in AI</li>
+                    <li>AI Bias and Fairness</li>
+                    <li>AI Safety and Regulation</li>
+                </ul>
+            </li>    
+        </ul>
+    </section>
+
+    <section id="instructors" class="instructors">
+        <h2>Instructors</h2>
+        <div class="instructor-div">
+            <div class="instructor-card">
+                <img class="instructor-img" src="prof-1.jpg" alt="Instructor 1">
+                <div class="instructor-details">
+                    <h3>Dr Manjubala Bisi</h3>
+                    <p>Assistant Professor<br>
+                        Department of CSE <br>
+                        National Institute Of Technology, Warangal
+                    </p>
+                </div>
+            </div>
+            <div class="instructor-card">
+                <img class="instructor-img" src="prof-2.jpg" alt="Instructor 2">
+                <div class="instructor-details">
+                    <h3>Dr Sanjaya Kumar Panda</h3>
+                    <p>Assistant Professor<br>
+                        Department of CSE <br>
+                        National Institute Of Technology, Warangal
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="progress">
+        <h2>Student's Progress</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Course Schedule</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Topic</th>
+                <th>Video Link</th>
+                <th>Notes</th>
+                <th>Done</th> <!-- New column for Done -->
+            </tr>
+            <tr>
+                <td>Week 1</td>
+                <td>Introduction to Artificial Intelligence</td>
+                <td><a href="video1.html">Watch Video</a></td>
+                <td><a href="AI-notes.pdf">View Notes</a></td>
+                <td><input type="checkbox" id="topic1" name="topic1"></td> <!-- Checkbox for Week 1 -->
+            </tr>
+            <tr>
+                <td>Week 2</td>
+                <td>Machine Learning</td>
+                <td><a href="video1.html">Watch Video</a></td>
+                <td><a href="notes1.html">View Notes</a></td>
+                <td><input type="checkbox" id="topic1" name="topic1"></td> <!-- Checkbox for Week 1 -->
+            </tr>
+            <tr>
+                <td>Week 3</td>
+                <td>Natural Language Processing</td>
+                <td><a href="video1.html">Watch Video</a></td>
+                <td><a href="notes1.html">View Notes</a></td>
+                <td><input type="checkbox" id="topic1" name="topic1"></td> <!-- Checkbox for Week 1 -->
+            </tr>
+            <tr>
+                <td>Week 4</td>
+                <td>Computer Vision</td>
+                <td><a href="video1.html">Watch Video</a></td>
+                <td><a href="notes1.html">View Notes</a></td>
+                <td><input type="checkbox" id="topic1" name="topic1"></td> <!-- Checkbox for Week 1 -->
+            </tr>
+            <tr>
+                <td>Week 5</td>
+                <td>Robotics</td>
+                <td><a href="video1.html">Watch Video</a></td>
+                <td><a href="notes1.html">View Notes</a></td>
+                <td><input type="checkbox" id="topic1" name="topic1"></td> <!-- Checkbox for Week 1 -->
+            </tr>
+            <tr>
+                <td>Week 6</td>
+                <td>Ethical Considerations</td>
+                <td><a href="video1.html">Watch Video</a></td>
+                <td><a href="notes1.html">View Notes</a></td>
+                <td><input type="checkbox" id="topic1" name="topic1"></td> <!-- Checkbox for Week 1 -->
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Introduction to Artificial Intelligence Course</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            updateProgressBar();
+            // Attach event listener to checkboxes
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', updateProgressBar);
+            });
+        };
+
+        function updateProgressBar() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var totalTopics = checkboxes.length;
+            var completedTopics = 0;
+
+            // Count the number of checked checkboxes
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    completedTopics++;
+                }
+            });
+
+            // Calculate progress percentage
+            var progressPercentage = (completedTopics / totalTopics) * 100;
+
+            // Update the progress bar width
+            var progressBar = document.getElementById("myBar");
+            progressBar.style.width = progressPercentage + '%';
+            progressBar.innerHTML = progressPercentage.toFixed(2) + '%'; // Display percentage
+        }
+    </script>
+</body>
+</html>

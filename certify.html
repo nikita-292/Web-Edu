@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certify</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            padding-top: 60px;
+        }
+
+        .content h3 {
+            font-size: 2.1rem;
+        }
+
+        .content p {
+            font-size: 1.6rem;
+        }
+
+        .certify-content {
+            padding-top: 50px;
+        }
+
+        .certify-head {
+            margin: 20px;
+        }
+
+        .display-content {
+            display: flex;
+            flex: 1;
+            margin-top: 60px;
+            background: linear-gradient(to bottom, #10639a, #3498db);
+            padding: 50px;
+            color: white;
+        }
+
+        .block1,
+        .block2,
+        .block3 {
+            flex: 1;
+        }
+
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .certify-head h2 {
+            font-size: 1.9rem;
+        }
+
+        .certify-head h1 {
+            font-size: 2.6rem;
+        }
+
+        .skils-test {
+            max-width: 1600px;
+            margin: 10px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 50px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background: linear-gradient(to bottom, #48cae4, #caf0f8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 300px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 2.1rem;
+            color: #333333;
+        }
+
+        .card p {
+            margin-bottom: 0;
+            font-size: 1.5rem;
+            color: #666666;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #5c98d5;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 50%;
+            transition: background-color 0.9s;
+        }
+
+        .xxx{
+            margin-top: 80px;
+            margin-bottom: 50px;
+            word-spacing: 8px;
+            letter-spacing: 2px;
+            font-family: monospace;
+        }
+
+        .certify-head h2{
+            font-size: 2.6rem;
+        }
+
+
+
+        .button:hover {
+            background-color: #2c3e50;
+        }
+
+        .main-certify-section{
+            margin-bottom: 100px;
+        }
+
+        .fade-hr {
+            width: 100%;
+            border: 0;
+            height: 1px;
+            margin: 20px auto;
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: background-color 0.5s ease;
+        }
+
+        .btn:hover{
+            background-color: #3498db;
+            color: white;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="certify-container">
+        <header class="light" id="head">
+            <div class="logo">
+                <h1>Edu-Star</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="darkMode()"><i class="fa-solid fa-moon"></i></a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="certify.html">Certify</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" onclick="togglePopup()" class="active"><i class="fa-solid fa-user"
+                                style="color: #f9f7f7;"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <div class="certify-content">
+                <div class="certify-head">
+                    <h1>Get Certified</h1>
+                </div>
+                <hr class="fade-hr">
+                <div class="display-content flex">
+                    <div class="block1">
+                        <div class="content">
+                            <h3>Stand out from the crowd</h3>
+                            <p>Get certified in technical skills by taking the HackerRank Certification Test</p>
+                        </div>
+                    </div>
+                    <div class="block2">
+                        <div class="content">
+                            <h3>Standardised Assessment</h3>
+                            <p>Assessments are organised around specific skills and are carefully curated based on years
+                                of
+                                recruiting data from 2000+ companies</p>
+                        </div>
+                    </div>
+                    <div class="block3">
+                        <div class="content">
+                            <h3>Enrich your profile</h3>
+                            <p>Upon successfully clearing an assessment, you can promote yourself using the HackerRank
+                                certificate to peers and employers</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="main-certify-section">
+                <div class="certify-head">
+                    <center><h2 class="xxx">Get Your Skills Certified</h2></center>
+                    <div class="skils-test">
+                        <div class="card">
+                            <h3>JavaScript(Intermediate)</h3>
+                            <p>Description of skill 1 goes here.</p>
+                            <center><a href="certify_Css.html" class="btn" id="hero-btn">Get Certified</a></center>
+                        </div>
+                        <div class="card">
+                            <h3>CSS (Basics)</h3>
+                            <p>Description of skill 2 goes here.</p>
+                            <center><a href="certify_Css.html" class="btn" id="hero-btn">Get Certified</a></center>
+                        </div>
+                        <div class="card">
+                            <h3>Node (Basic)</h3>
+                            <p>Description of skill 3 goes here.</p>
+                            <center><a href="certify_Css.html" class="btn" id="hero-btn">Get Certified</a></center>
+                        </div>
+                        <div class="card">
+                            <h3>Node.js (Intermediate)</h3>
+                            <p>Description of skill 1 goes here.</p>
+                            <center><a href="certify_Css.html" class="btn" id="hero-btn">Get Certified</a></center>
+                        </div>
+                        <div class="card">
+                            <h3>Problem Solving (Basic)</h3>
+                            <p>Description of skill 2 goes here.</p>
+                            <center><a href="certify_Css.html" class="btn" id="hero-btn">Get Certified</a></center>
+                        </div>
+                        <div class="card">
+                            <h3>Python (Basic)</h3>
+                            <p>Description of skill 3 goes here.</p>
+                            <center><a href="certify_Css.html" class="btn" id="hero-btn">Get Certified</a></center>
+                        </div>                        
+                    </div>
+                </div>
+        </section>
+
+        <footer id="footer">
+            <p>&copy; 2024 Edu-Star. All rights reserved.</p>
+          </footer>
+    </div>
+</body>
+
+    <script src="https://kit.fontawesome.com/7ea5bdaf01.js" crossorigin="anonymous"></script>
+
+
+</html>

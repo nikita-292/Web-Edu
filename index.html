@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Learning Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Styles for the popup container */
+    .popup-container {
+      display: none;
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      width: 600px;
+      height: 900px;
+      transform: translate(-50%, -50%);
+      /* background-color: #2c3e50; */
+      padding: 20px;
+      border-radius: 5px;
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+      z-index: 1000;
+    }
+
+    /*  Styles for the overlay */
+    /* .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    } */
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+
+<body>
+  <header class="light" id="head">
+    <div class="logo">
+      <h1>Edu-Star</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="darkMode()"><i class="fa-solid fa-moon"></i></a></li>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="certify.html">Certify</a></li>
+        <li><a href="#contact_me">Contact</a></li>
+        <li><a href="#" onclick="togglePopup()" class="active"><i class="fa-solid fa-user"
+              style="color: #f9f7f7;"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero"><br>
+    <div class="content">
+      <h2>Learn Anything, Anytime, Anywhere</h2>
+      <p>Explore our wide range of courses and start learning today!</p>
+      <a href="#courses" class="btn" id="hero-btn">Browse Courses</a>
+    </div>
+  </section>
+
+  <section class="about" id="about"><br><br>
+    <div class="content">
+      <h2>About Us</h2>
+      <p>Welcome to our e-learning platform! We are dedicated to providing high-quality online courses that empower
+        individuals to learn anything, anytime, anywhere. Our team of expert instructors ensures that our courses are
+        engaging, informative, and up-to-date with the latest industry trends.</p>
+      <p>Whether you're looking to expand your skills, advance your career, or explore new interests, we have a diverse
+        range of courses to suit your needs. From programming and data science to design and business, there's something
+        for everyone.</p>
+      <p>Join our community of learners today and take the first step towards achieving your learning goals!</p>
+    </div>
+  </section>
+
+
+  <section class="courses" id="courses"><br><br>
+    <h2>Featured Courses</h2>
+    <div class="course-grid">
+      <div class="course-card" id="c1">
+        <img src="webd-img.jpeg" alt="Course 1">
+        <h3>Web Development</h3>
+        <p>A comprehensive course covering HTML, CSS, and JavaScript.</p>
+        <a href="WebD.html" class="btn">Browse Course</a>&ensp;&ensp;
+        <a href="#" class="btn">Enroll Now</a>
+      </div>
+      <div class="course-card" id="c2">
+        <img src="datascience-img.webp" alt="Course 2">
+        <h3>Data Science Fundamentals</h3>
+        <p>Learn the basics of data science, including Python programming and data analysis.</p>
+        <a href="DataScience.html" class="btn">Browse Course</a>&ensp;&ensp;
+        <a href="#" class="btn">Enroll Now</a>
+      </div>
+      <!-- Add four more course cards -->
+      <div class="course-card" id="c3">
+        <img src="ml-img.webp" alt="Course 3">
+        <h3>Machine Learning Essentials</h3>
+        <p>Discover the fundamentals of machine learning and predictive modeling.</p>
+        <a href="ML.html" class="btn">Browse Course</a>&ensp;&ensp;
+        <a href="#" class="btn">Enroll Now</a>
+      </div>
+      <div class="course-card" id="c4">
+        <img src="graphicD-img.webp" alt="Course 4">
+        <h3>Graphic Design Basics</h3>
+        <p>Learn the principles of graphic design and create stunning visual content.</p>
+        <a href="GraphicD.html" class="btn">Browse Course</a>&ensp;&ensp;
+        <a href="#" class="btn">Enroll Now</a>
+      </div>
+      <div class="course-card" id="c5">
+        <img src="appD-img.webp" alt="Course 5">
+        <h3>Mobile App Development</h3>
+        <p>Build mobile apps for iOS and Android using popular frameworks.</p>
+        <a href="AppD.html" class="btn">Browse Course</a>&ensp;&ensp;
+        <a href="#" class="btn">Enroll Now</a>
+      </div>
+      <div class="course-card" id="c6">
+        <img src="ai-img.jpeg" alt="Course 6">
+        <h3>Artificial Intelligence</h3>
+        <p>Explore the basics of AI and its applications in various fields.</p>
+        <a href="AI.html" class="btn">Browse Course</a>&ensp;&ensp;
+        <a href="#" class="btn">Enroll Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog" id="blog"><br><br>
+    <div class="blog-content">
+      <h2 class="blog-h2" id="blog-h2">Latest Blog Posts</h2>
+      <div class="blog-grid">
+        <div class="blog-post" id="bp-1">
+          <h3>Top 10 Tips for Learning Web Development</h3>
+          <p>Are you interested in learning web development? Here are ten tips to help you get started and succeed in
+            your journey to becoming a web developer.</p>
+          <a href="web_development_description.html">Read More</a>
+        </div>
+        <div class="blog-post" id="bp-2">
+          <h3>The Importance of Data Science in Today's World</h3>
+          <p>Data science is transforming industries and driving innovation. Learn why data science skills are in high
+            demand and how you can start your journey in this exciting field.</p>
+          <a href="data_science_description.html">Read More</a>
+        </div>
+        <div class="blog-post" id="bp-3">
+          <h3>Mastering Graphic Design: Essential Principles</h3>
+          <p>Discover the essential principles of graphic design and learn how to create visually appealing designs that
+            communicate effectively. Get started on your journey to mastering graphic design today!</p>
+          <a href="blog3.html">Read More</a>
+        </div>
+        <div class="blog-post" id="bp-4">
+          <h3>Introduction to Artificial Intelligence: Basics and Applications</h3>
+          <p>Explore the fundamentals of artificial intelligence (AI) and its applications in various fields such as
+            healthcare, finance, and gaming. Get ready to dive into the exciting world of AI!</p>
+          <a href="blog4.html">Read More</a>
+        </div>
+
+        <div class="blog-post" id="bp-5">
+          <h3>10 Essential JavaScript Concepts Every Developer Should Know</h3>
+          <p>JavaScript is a powerful programming language used to create dynamic and interactive websites. Here are ten
+            essential JavaScript concepts every developer should know to become proficient in web development.</p>
+          <a href="blog5.html">Read More</a>
+        </div>
+        <div class="blog-post" id="bp-6">
+          <h3>The Future of Remote Work: Trends and Challenges</h3>
+          <p>The COVID-19 pandemic has accelerated the adoption of remote work. Explore the future of remote work,
+            including emerging trends and challenges faced by remote workers and employers.</p>
+          <a href="blog6.html">Read More</a>
+        </div>
+      </div>
+      <button class="create-blog-btn">WOULD LIKE TO WRITE YOUR OWN VIEWS</button>
+    </div>
+  </section>
+
+  </div>
+  <div id="createBlogModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Create a New Blog Post</h2>
+      <form id="blogForm">
+        <div class="form-group">
+          <label for="blogTitle">Title:</label>
+          <input type="text" id="blogTitle" name="blogTitle" required>
+        </div>
+        <div class="form-group">
+          <label for="blogIntroduction">Introduction:</label>
+          <textarea id="blogIntroduction" name="blogIntroduction" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="blogContent">Content:</label>
+          <textarea id="blogContent" name="blogContent" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="contact_me" id="contact_me">
+    <h1 >Contact Us</h1> 
+   </div>
+   <section class="container">  
+     <section class="faq" id="faq">
+       <div class="faq-content">
+           <h2 class="faq-h2">Facing an Issue?</h2>
+           <p class="faq-p">Check out our frequently faced issues below. If you don't find what you're looking for, feel free to contact us.</p>
+           <div class="faq-list">
+               <div class="faq-item">
+                   <h3 class="faq-question">How do I reset my password?</h3>
+                   <div class="faq-answer">
+                       <p>You can reset your password by visiting the login page and clicking on the "Forgot Password" link.</p>
+                   </div>
+               </div>
+               <div class="faq-item">
+                   <h3 class="faq-question">Can I change my email address?</h3>
+                   <div class="faq-answer">
+                       <p>Yes, you can change your email address in your account settings.</p>
+                 </div>
+               </div>
+               <div class="faq-item">
+                 <h3 class="faq-question">How can I access a lecture of the course?</h3>
+                 <div class="faq-answer">
+                     <p>First, log in to your account and navigate to the dashboard. Choose or click on the course you want to access.
+                       </p>
+                       <p> On the left side, you will find an index of course content. Scroll through and find the lecture you wish to watch.
+                       </p>
+                       <p>
+                       Click on the lecture to view its contents.</p>
+                 </div>
+             </div>
+             <div class="faq-item">
+               <h3 class="faq-question">What should I do if I am facing a lag issue in video recordings?</h3>
+               <div class="faq-answer">
+                   <p>If you are experiencing a lag issue in video recordings, please create a screen recording of the issue you are facing and provide the details using the Support Form .</p>
+             </div>
+           </div>
+           </div>
+       </div>
+   </section>  
+ 
+   <section class="contact" id="contact">
+     <div class="contact-content">
+         <h2 class="contact-h2">Contact Us</h2>
+         <form action="#" method="POST" class="contact-form">
+             <div class="form-group">
+                 <label for="name" class="contact-label">Name:</label>
+                 <input type="text" id="name" name="name" required>
+             </div>
+             <div class="form-group">
+                 <label for="email" class="contact-label">Email:</label>
+                 <input type="email" id="email" name="email" required>
+             </div>
+             <div class="form-group">
+                 <label for="phone" class="contact-label">Phone:</label>
+                 <input type="tel" id="phone" name="phone" required>
+             </div>
+             <div class="form-group">
+                 <label for="message" class="contact-label">Message:</label>
+                 <textarea id="message" name="message" rows="4" required></textarea>
+             </div>
+             <center><button type="submit" class="contact-submit-btn">Send Message</button></center>
+         </form>
+     </div>
+ </section>
+ 
+ </section>
+
+  <footer id="footer">
+    <p>&copy; 2024 Edu-Star. All rights reserved.</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/7ea5bdaf01.js" crossorigin="anonymous"></script>
+
+  <!-- The following script dynamically loads the login/signup popup -->
+  <script>
+
+
+
+    // Function to toggle the popup
+    function togglePopup() {
+      var popup = document.getElementById('popup');
+      var overlay = document.getElementById('overlay');
+      var loginContainer = document.getElementById('login-container');
+      var signupContainer = document.getElementById('signup-container');
+
+      if (popup.style.display === 'none') {
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+      } else {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+      }
+    }
+
+    function funcLogin() {
+      popup.style.height = "600px";
+      var loginContainer = document.getElementById('login-container');
+      var signupContainer = document.getElementById('signup-container');
+      loginContainer.classList.remove('hidden');
+      signupContainer.classList.add('hidden');
+    }
+
+    function funcSignup() {
+      popup.style.height = "670px";
+      var loginContainer = document.getElementById('login-container');
+      var signupContainer = document.getElementById('signup-container');
+      loginContainer.classList.add('hidden');
+      signupContainer.classList.remove('hidden');
+    }
+
+
+
+
+    // Dynamically load the login/signup popup
+    function loadPopup() {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var popupContainer = document.createElement('div');
+          popupContainer.innerHTML = xhr.responseText;
+          document.body.appendChild(popupContainer);
+        }
+      };
+      xhr.open('GET', 'login.html', true);
+      xhr.send();
+    }
+
+    // Call the loadPopup function when the page loads
+    window.onload = function () {
+      loadPopup();
+    };
+
+
+    function darkMode() {
+      var header = document.getElementById('head');
+      var hero = document.getElementById('hero');
+      var heroBtn = document.getElementById('hero-btn');
+      var about = document.getElementById('about');
+      var c1 = document.getElementById('c1');
+      var c2 = document.getElementById('c2');
+      var c3 = document.getElementById('c3');
+      var c4 = document.getElementById('c4');
+      var c5 = document.getElementById('c5');
+      var c6 = document.getElementById('c6');
+      var course = document.getElementById('courses');
+      var contact = document.getElementById('contact');
+      var contact1 = document.getElementById('contact-h2');
+      var contact2 = document.getElementById('contact-p');
+      var cl1 = document.getElementById('cl1');
+      var cl2 = document.getElementById('cl2');
+      var cl3 = document.getElementById('cl3');
+
+
+      if (header.classList == 'light') {
+        header.classList.remove('light');
+        header.classList.add('dark');
+      } else if (header.classList == 'dark') {
+        header.classList.remove('dark');
+        header.classList.add('light');
+      }
+
+      if (hero.classList == 'hero') {
+        hero.classList.remove('hero');
+        hero.classList.add('hero-dark');
+      } else if (hero.classList == 'hero-dark') {
+        hero.classList.remove('hero-dark');
+        hero.classList.add('hero');
+      }
+
+      if (heroBtn.classList == 'btn') {
+        heroBtn.classList.remove('btn');
+        heroBtn.classList.add('btn-dark');
+      } else if (heroBtn.classList == 'btn-dark') {
+        heroBtn.classList.remove('btn-dark');
+        heroBtn.classList.add('btn');
+      }
+
+      if (about.classList == 'about') {
+        about.classList.remove('about');
+        about.classList.add('about-dark');
+      } else if (about.classList == 'about-dark') {
+        about.classList.remove('about-dark');
+        about.classList.add('about');
+      }
+
+      if (c1.classList == 'course-card') {
+        c1.classList.remove('course-card');
+        c1.classList.add('course-card-dark');
+      } else if (course.classList == 'course-card-dark') {
+        c1.classList.remove('course-card-dark');
+        c1.classList.add('course-card');
+      }
+
+      if (c2.classList == 'course-card') {
+        c2.classList.remove('course-card');
+        c2.classList.add('course-card-dark');
+      } else if (course.classList == 'course-card-dark') {
+        c2.classList.remove('course-card-dark');
+        c2.classList.add('course-card');
+      }
+
+      if (c3.classList == 'course-card') {
+        c3.classList.remove('course-card');
+        c3.classList.add('course-card-dark');
+      } else if (course.classList == 'course-card-dark') {
+        c3.classList.remove('course-card-dark');
+        c3.classList.add('course-card');
+      }
+
+      if (c4.classList == 'course-card') {
+        c4.classList.remove('course-card');
+        c4.classList.add('course-card-dark');
+      } else if (course.classList == 'course-card-dark') {
+        c4.classList.remove('course-card-dark');
+        c4.classList.add('course-card');
+      }
+
+      if (c5.classList == 'course-card') {
+        c5.classList.remove('course-card');
+        c5.classList.add('course-card-dark');
+      } else if (course.classList == 'course-card-dark') {
+        c5.classList.remove('course-card-dark');
+        c5.classList.add('course-card');
+      }
+
+      if (c6.classList == 'course-card') {
+        c6.classList.remove('course-card');
+        c6.classList.add('course-card-dark');
+      } else if (course.classList == 'course-card-dark') {
+        c6.classList.remove('course-card-dark');
+        c6.classList.add('course-card');
+      }
+
+      if (course.classList == 'courses') {
+        course.classList.remove('courses');
+        course.classList.add('courses-dark');
+      } else if (course.classList == 'courses-dark') {
+        course.classList.remove('courses-dark');
+        course.classList.add('courses');
+      }
+
+      if (contact.classList == 'contact') {
+        contact.classList.remove('contact');
+        contact.classList.add('contact-dark');
+      } else if (contact.classList == 'contact-dark') {
+        contact.classList.remove('contact-dark');
+        contact.classList.add('contact');
+      }
+
+      if (contact1.classList == 'contact-h2') {
+        contact1.classList.remove('contact-h2');
+        contact1.classList.add('contact-dark-h2');
+      } else if (contact1.classList == 'contact-dark-h2') {
+        contact1.classList.remove('contact-dark-h2');
+        contact1.classList.add('contact-h2');
+      }
+
+      if (contact2.classList == 'contact-p') {
+        contact2.classList.remove('contact-p');
+        contact2.classList.add('contact-dark-p');
+      } else if (contact2.classList == 'contact-dark-p') {
+        contact2.classList.remove('contact-dark-p');
+        contact2.classList.add('contact-p');
+      }
+
+      if (cl1.classList == 'contact-label') {
+        cl1.classList.remove('contact-label');
+        cl1.classList.add('contact-dark-label');
+      } else if (cl1.classList == 'contact-dark-label') {
+        cl1.classList.remove('contact-dark-label');
+        cl1.classList.add('contact-label');
+      }
+
+      if (cl2.classList == 'contact-label') {
+        cl2.classList.remove('contact-label');
+        cl2.classList.add('contact-dark-label');
+      } else if (cl2.classList == 'contact-dark-label') {
+        cl2.classList.remove('contact-dark-label');
+        cl2.classList.add('contact-label');
+      }
+
+      if (cl3.classList == 'contact-label') {
+        cl3.classList.remove('contact-label');
+        cl3.classList.add('contact-dark-label');
+      } else if (cl3.classList == 'contact-dark-label') {
+        cl3.classList.remove('contact-dark-label');
+        cl3.classList.add('contact-label');
+      }
+
+      var blog = document.getElementById('blog');
+      if (blog.classList == 'blog') {
+        blog.classList.remove('blog');
+        blog.classList.add('blog-dark');
+      } else if (blog.classList == 'blog-dark') {
+        blog.classList.remove('blog-dark');
+        blog.classList.add('blog');
+      }
+
+      var blogpost = document.getElementById('bp-1');
+      var blogpost1 = document.getElementById('bp-2');
+      var blogpost2 = document.getElementById('bp-3');
+      var blogpost3 = document.getElementById('bp-4');
+      var blogpost4 = document.getElementById('bp-5');
+      var blogpost5 = document.getElementById('bp-6');
+
+      if (blogpost.classList == 'blog-post') {
+        blogpost.classList.remove('blog-post');
+        blogpost.classList.add('blog-dark-post');
+      } else {
+        blogpost.classList.remove('blog-dark-post');
+        blogpost.classList.add('blog-post');
+      }
+
+      if (blogpost1.classList == 'blog-post') {
+        blogpost1.classList.remove('blog-post');
+        blogpost1.classList.add('blog-dark-post');
+      } else {
+        blogpost1.classList.remove('blog-dark-post');
+        blogpost1.classList.add('blog-post');
+      }
+      if (blogpost2.classList == 'blog-post') {
+        blogpost2.classList.remove('blog-post');
+        blogpost2.classList.add('blog-dark-post');
+      } else {
+        blogpost2.classList.remove('blog-dark-post');
+        blogpost2.classList.add('blog-post');
+      }
+      if (blogpost3.classList == 'blog-post') {
+        blogpost3.classList.remove('blog-post');
+        blogpost3.classList.add('blog-dark-post');
+      } else {
+        blogpost3.classList.remove('blog-dark-post');
+        blogpost3.classList.add('blog-post');
+      }
+      if (blogpost4.classList == 'blog-post') {
+        blogpost4.classList.remove('blog-post');
+        blogpost4.classList.add('blog-dark-post');
+      } else {
+        blogpost4.classList.remove('blog-dark-post');
+        blogpost4.classList.add('blog-post');
+      }
+      if (blogpost5.classList == 'blog-post') {
+        blogpost5.classList.remove('blog-post');
+        blogpost5.classList.add('blog-dark-post');
+      } else {
+        blogpost5.classList.remove('blog-dark-post');
+        blogpost5.classList.add('blog-post');
+      }
+    }
+  </script>
+  <script src="blog.js"></script>
+  <script src="style.js"></script>
+  <script src="faq.js"></script>
+</body>
+
+</html>

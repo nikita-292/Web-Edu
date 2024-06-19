@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Essentials Course</title>
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+    <header>
+        <h1>Machine Learning Essentials</h1>
+    </header>
+    
+    <section>
+        <h2>Course Description</h2>
+        <p>This comprehensive course provides an introduction to the essential concepts and techniques of machine learning, covering topics such as supervised learning, unsupervised learning, and model evaluation. Whether you're a beginner or have some experience, this course will help you understand the fundamentals of machine learning and how to apply them to real-world problems.</p>
+    </section>
+    
+    <section id="course-contents">
+        <h2>Course Contents</h2>
+        <ul>
+            <li class="topic">Introduction to Machine Learning
+                <ul class="subtopics">
+                    <li>Overview of Machine Learning</li>
+                    <li>Types of Machine Learning</li>
+                    <li>Applications of Machine Learning</li>
+                </ul>
+            </li>
+            <li class="topic">Supervised Learning
+                <ul class="subtopics">
+                    <li>Linear Regression</li>
+                    <li>Logistic Regression</li>
+                    <li>Decision Trees and Random Forests</li>
+                </ul>
+            </li>
+            <li class="topic">Unsupervised Learning
+                <ul class="subtopics">
+                    <li>K-means Clustering</li>
+                    <li>Hierarchical Clustering</li>
+                    <li>Dimensionality Reduction Techniques</li>
+                </ul>
+            </li>
+            <li class="topic">Model Evaluation and Validation
+                <ul class="subtopics">
+                    <li>Cross-Validation</li>
+                    <li>Evaluation Metrics</li>
+                    <li>Hyperparameter Tuning</li>
+                </ul>
+            </li>
+            <li class="topic">Introduction to Deep Learning
+                <ul class="subtopics">
+                    <li>Neural Networks Basics</li>
+                    <li>Introduction to TensorFlow</li>
+                    <li>Building Deep Learning Models</li>
+                </ul>
+            </li>
+            <li class="topic">Real-World Applications
+                <ul class="subtopics">
+                    <li>Image Recognition</li>
+                    <li>Natural Language Processing</li>
+                    <li>Recommender Systems</li>
+                </ul>
+            </li>    
+        </ul>
+    </section>
+
+    <section id="instructors" class="instructors">
+        <h2>Instructors</h2>
+        <div class="instructor-div">
+            <div class="instructor-card">
+                <img class="instructor-img" src="prof-1.jpg" alt="Instructor 1">
+                <div class="instructor-details">
+                    <h3>Dr Manjubala Bisi</h3>
+                    <p>Assistant Professor<br>
+                        Department of CSE <br>
+                        National Institute Of Technology, Warangal
+                    </p>
+                </div>
+            </div>
+            <div class="instructor-card">
+                <img class="instructor-img" src="prof-2.jpg" alt="Instructor 2">
+                <div class="instructor-details">
+                    <h3>Dr Sanjaya Kumar Panda</h3>
+                    <p>Assistant Professor<br>
+                        Department of CSE <br>
+                        National Institute Of Technology, Warangal
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="progress">
+        <h2>Student's Progress</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Course Schedule</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Topic</th>
+                <th>Video Link</th>
+                <th>Notes</th>
+                <th>Done</th> <!-- New column for Done -->
+            </tr>
+            <tr>
+                <td>Week 1</td>
+                <td>Introduction to Machine Learning</td>
+                <td><a href="video1.html">Watch Video</a></td>
+                <td><a href="ML-notes.pdf">View Notes</a></td>
+                <td><input type="checkbox" id="topic1" name="topic1"></td> <!-- Checkbox for Week 1 -->
+            </tr>
+            <tr>
+                <td>Week 2</td>
+                <td>Supervised Learning</td>
+                <td><a href="video1.html">Watch Video</a></td>
+                <td><a href="notes1.html">View Notes</a></td>
+                <td><input type="checkbox" id="topic1" name="topic1"></td> <!-- Checkbox for Week 1 -->
+            </tr>
+            <tr>
+                <td>Week 3</td>
+                <td>Unsupervised Learning</td>
+                <td><a href="video1.html">Watch Video</a></td>
+                <td><a href="notes1.html">View Notes</a></td>
+                <td><input type="checkbox" id="topic1" name="topic1"></td> <!-- Checkbox for Week 1 -->
+            </tr>
+            <tr>
+                <td>Week 4</td>
+                <td>Model Evaluation and Validation</td>
+                <td><a href="video1.html">Watch Video</a></td>
+                <td><a href="notes1.html">View Notes</a></td>
+                <td><input type="checkbox" id="topic1" name="topic1"></td> <!-- Checkbox for Week 1 -->
+            </tr>
+            <tr>
+                <td>Week 5</td>
+                <td>Introduction to Deep Learning</td>
+                <td><a href="video1.html">Watch Video</a></td>
+                <td><a href="notes1.html">View Notes</a></td>
+                <td><input type="checkbox" id="topic1" name="topic1"></td> <!-- Checkbox for Week 1 -->
+            </tr>
+            <tr>
+                <td>Week 6</td>
+                <td>Real World Applications</td>
+                <td><a href="video1.html">Watch Video</a></td>
+                <td><a href="notes1.html">View Notes</a></td>
+                <td><input type="checkbox" id="topic1" name="topic1"></td> <!-- Checkbox for Week 1 -->
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Machine Learning Essentials Course</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            updateProgressBar();
+            // Attach event listener to checkboxes
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', updateProgressBar);
+            });
+        };
+
+        function updateProgressBar() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var totalTopics = checkboxes.length;
+            var completedTopics = 0;
+
+            // Count the number of checked checkboxes
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    completedTopics++;
+                }
+            });
+
+            // Calculate progress percentage
+            var progressPercentage = (completedTopics / totalTopics) * 100;
+
+            // Update the progress bar width
+            var progressBar = document.getElementById("myBar");
+            progressBar.style.width = progressPercentage + '%';
+            progressBar.innerHTML = progressPercentage.toFixed(2) + '%'; // Display percentage
+        }
+    </script>
+</body>
+</html>

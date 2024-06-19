@@ -1,0 +1,785 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+.light {
+  background-color: #2c3e50;
+  /* Dark Blue */
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  /* Make the header fixed */
+  top: 0;
+  /* Position it at the top of the viewport */
+  z-index: 1000;
+  /* Ensure it's on top of other content */
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.dark {
+  background-color: #2b2d42;
+  /* Dark Blue */
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  /* Make the header fixed */
+  top: 0;
+  /* Position it at the top of the viewport */
+  z-index: 1000;
+  /* Ensure it's on top of other content */
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.7em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+  font-size: 1.3em;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #3498db;
+  /* Light Blue */
+}
+
+/* Hero Section Styles */
+.hero {
+  background: linear-gradient(to bottom, #2980b9, #3498db);
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero-dark {
+  background: linear-gradient(to bottom, #000000, #14213d);
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero .content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-dark .content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-dark h2 {
+  font-size: 5em;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 5em;
+  margin-bottom: 20px;
+}
+
+.hero-dark p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #2c3e50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #34495e;
+}
+
+.btn-dark {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #5c98d5;
+  color: #0b0b0b;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+  background-color: #107deb;
+}
+
+
+/* Courses Section Styles */
+.courses {
+  background-color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.courses h2 {
+  font-size: 5em;
+  margin-bottom: 30px;
+}
+
+.courses-dark {
+  background-color: black;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.courses-dark h2 {
+  color: white;
+  font-size: 5em;
+  margin-bottom: 30px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns */
+  column-gap: 50px;
+}
+
+.course-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+  height: 90%;
+}
+
+.course-card-dark {
+  background-color: #14213d;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(176, 174, 174, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+  height: 90%;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card-dark:hover {
+  transform: translateY(-5px);
+}
+
+.course-card img {
+  width: 100%;
+  height: 50%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.course-card-dark img {
+  width: 100%;
+  height: 50%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.course-card h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.course-card-dark h3 {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.course-card-dark p {
+  color: white;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+
+
+.course-card .btn {
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 1.3em;
+}
+
+.course-card-dark .btn {
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 1.3em;
+}
+
+.course-card .btn:hover {
+  background-color: #2980b9;
+}
+
+.course-card-dark .btn:hover {
+  background-color: #2980b9;
+}
+
+
+/* Footer Styles */
+footer {
+  background-color: #34495e;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+/* About Section Styles */
+.about {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.about .content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 4.5em;
+  margin-bottom: 20px;
+  color: #333;
+  /* Dark text color */
+}
+
+.about p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  color: #555;
+  /* Slightly darker text color */
+}
+
+.about-dark {
+  background-color: #0c0c0c;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.about-dark .content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-dark h2 {
+  font-size: 4.5em;
+  margin-bottom: 20px;
+  color: #fbfafa;
+  /* Dark text color */
+}
+
+.about-dark p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  color: #fbfafa;
+  /* Slightly darker text color */
+}
+
+/* Blog Section Styles */
+.blog {
+  background-color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.blog-dark {
+  background-color: #000000;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.blog-content {
+  max-width: 2000px;
+  /* Increase the maximum width */
+  margin: 0 auto;
+}
+
+
+.blog-h2 {
+  font-size: 5em;
+  margin-bottom: 40px;
+  color: #333;
+  /* Dark text color */
+}
+
+.blog-dark h2{
+  color: white;
+}
+
+
+.blog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow wrapping */
+  column-gap: 40px;
+  row-gap: 50px;
+  padding-bottom: 20px;
+  /* Add padding at the bottom for spacing */
+  justify-content: center;
+  /* Center items horizontally */
+}
+
+.blog-post {
+  flex: 0 0 calc(33.33% - 30px);
+  /* Set flex basis to one-third minus gap */
+  max-width: calc(33.33% - 30px);
+  /* Set max-width to one-third minus gap */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-dark-post {
+  flex: 0 0 calc(33.33% - 30px);
+  /* Set flex basis to one-third minus gap */
+  max-width: calc(33.33% - 30px);
+  /* Set max-width to one-third minus gap */
+  background-color: #22223b;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-dark-post h3{
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: white;
+  transition: color 0.3s ease;
+
+}
+
+.blog-post:nth-child(3n) {
+  margin-right: 0;
+  /* Remove right margin for every third post */
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+  background-color: #f4f4f4;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.blog-post h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #333;
+  /* Dark text color */
+  transition: color 0.3s ease;
+}
+
+.blog-post:hover h3 {
+  color: #2980b9;
+  /* Text color on hover */
+}
+
+.blog-dark-post p{
+  font-size: 1.1em;
+  color: white;
+  /* Slightly darker text color */
+  line-height: 1.6;
+  margin-bottom: 20px;  
+}
+
+.blog-post p {
+  font-size: 1.5em;
+  color: #555;
+  /* Slightly darker text color */
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.blog-post a {
+  color: #3498db;
+  /* Link color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.3em;
+}
+
+.blog-post a:hover {
+  color: #2980b9;
+  /* Darker link color on hover */
+}
+
+.create-blog-btn {
+  background-color: #3498db;
+  /* Button background color */
+  color: #fff;
+  /* Button text color */
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.4em;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-blog-btn:hover {
+  background-color: #2980b9;
+  /* Darker button background color on hover */
+}
+
+/*new style
+  
+  /* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 3px solid #192a56; 
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Blog form styling */
+#blogForm {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style for the delete button */
+.delete-btn {
+  background-color: seagreen;
+  /* Red background color */
+  color: #fff;
+  /* White text color */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  /* Adjust top position */
+  right: 10px;
+  /* Adjust right position */
+}
+
+/* Hover effect for the delete button */
+.delete-btn:hover {
+  background-color: darkcyan;
+  /* Lighter red on hover */
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #61a6ec;
+}
+
+
+
+.blog-post {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #004080;
+}
+
+/* Additional styles for "Read More" section */
+.blog-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post:hover a {
+  text-decoration: underline;
+}
+
+
+
+.contact_me{
+  font-size: 3em;
+  margin-bottom: 50px;
+  text-align: center;
+  margin-top: 60px;
+  
+}
+
+.faq-content {
+max-width: 800px;
+margin: 0 auto;
+margin-left: 50px;
+padding: 30px;
+margin-bottom: 70px;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+border: 3px solid #192a56; /* Dark blue border */
+
+}
+
+.faq-h2 {
+font-size: 2em;
+margin-bottom: 20px;
+color: #333;
+}
+
+.faq-p {
+font-size: 1.3em;
+margin-bottom: 30px;
+color: #555;
+}
+
+.faq-list {
+list-style: none;
+padding: 0;
+}
+
+.faq-item {
+margin-bottom: 30px;
+}
+
+.faq-question {
+font-size: 1.8em;
+margin-bottom: 10px;
+color: #333;
+}
+
+.faq-answer {
+font-size: 1.3em;
+color: #555;
+display: none;
+}
+
+
+.show-answer {
+display: block;
+}
+
+
+.contact-content {
+max-width: 800px;
+margin: 50 auto;
+margin-right: 20px;
+margin-bottom: 30px;
+padding: 20px;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+border: 3px solid #192a56; /* Dark blue border */
+
+}
+
+.contact-h2 {
+  text-align: center;
+font-size: 2em;
+margin-bottom: 10px;
+color: #333;
+padding-bottom: 10px;
+}
+
+.contact-form {
+display: grid;
+grid-template-columns: 1fr;
+grid-gap: 10px;
+}
+
+.form-group {
+margin-bottom: 3px;
+}
+
+.contact-label {
+  font-size: 1.3rem;
+font-weight: bold;
+color: #333;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.contact input[type="submit"]{
+  width: 50%;
+}
+
+.contact textarea {
+resize: vertical;
+}
+
+.contact-submit-btn {
+
+width: 50%;
+background-color: #3498db;
+color: #fff;
+border: none;
+padding: 15px;
+border-radius: 5px;
+font-size: 1em;
+cursor: pointer;
+transition: background-color 0.3s ease;
+border: 1px solid #192a56; /* Dark blue border */
+
+
+}
+
+.contact-submit-btn:hover {
+background-color: #2980b9;
+} 
+
+.container {
+display: flex;
+flex-direction: column;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+    flex-direction: row;
+}
+
+.faq {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact {
+    flex: 1;
+    margin-left: 70px;
+}
+

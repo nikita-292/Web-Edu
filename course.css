@@ -1,0 +1,283 @@
+/* Resetting default margin and padding */
+body, h1, h2, h3, p, ul, li, table, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+/* Box-sizing border-box for easier layout */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 60px 0;
+    border-bottom: 4px solid #3498db;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 80px;
+    font-family:monospace;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+section {
+    background-color: #fff;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-in-out;
+}
+
+h2 {
+    color: #3498db;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+ul li {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #555;
+    font-family: 'Times New Roman';
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/* Style for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: 'Times New Roman';
+}
+
+/* Style for table headers */
+th {
+    background-color: #f2f2f2;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd; /* Add border-bottom for separation */
+    font-size: 24px; /* Change font size */
+    font-weight: bold; /* Make text bold */
+}
+
+/* Style for table data cells */
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd; /* Add border-bottom for separation */
+    font-size: 20px; /* Change font size */
+}
+
+/* Alternate row color for better readability */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray background for even rows */
+}
+
+/* Style for links within the table cells */
+td a {
+    text-decoration: none;
+    color: #3498db; /* Change color to your preference */
+}
+
+/* Style for links when hovered over */
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Style for checkboxes */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    position: relative; /* Positioning for pseudo-element */
+}
+
+/* Style for checked checkboxes */
+input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+/* Style for tick mark inside checked checkboxes */
+input[type="checkbox"]:checked::before {
+    content: '\2713'; /* Unicode for tick mark */
+    font-size: 16px; /* Adjust size of the tick mark */
+    color: white; /* Color of the tick mark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+footer {
+    padding: 10px 0; /* Adjust padding as needed */
+    margin-top: 20px; /* Example margin-top */
+    background-color: #3498db; /* Example background color */
+    text-align: center; /* Center align text */
+    ;
+}
+
+/* Style for the footer text */
+footer p {
+    margin: 0;
+    color: white;
+}
+
+#progress {
+    margin-top: 50px;
+}
+
+#progress h2 {
+    margin-bottom: 20px;
+}
+
+/* Style for the progress bar */
+.progress-container {
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 30px;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    transition: width 0.5s ease; /* Add transition for smooth animation */
+}
+
+#course-contents ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#course-contents ul li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#course-contents ul li:hover {
+    /* transform: translateY(-10px); */
+    background-color: #e0e0e0;
+    font-weight: bolder;
+}
+
+#course-contents ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+#course-contents ul li a:hover {
+    text-decoration: underline;
+}
+
+.subtopics {
+    display: none;
+    margin-left: 20px;
+}
+
+.subtopics li{
+    color: #3498db;
+    font-size: 20px;
+}
+
+.topic:hover .subtopics {
+    display: block;
+}
+
+.instructors {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.instructor-card {
+    width: calc(49% - 20px); /* Adjusted width to accommodate two cards per row */
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.instructors h2 {
+    color: #3498db;
+}
+
+.instructor-card:hover {
+    transform: scale(1.05);
+}
+
+.instructor-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: left;
+}
+
+.instructor-details {
+    overflow: hidden;
+}
+
+.instructor-details h3{
+    font-size: 1.8rem;
+}
+
+.instructor-div{
+    display: flex;
+    justify-content: space-around;
+}
+
